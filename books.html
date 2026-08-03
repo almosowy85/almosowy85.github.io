@@ -19,11 +19,8 @@
 <h1>📚 مكتبة محمد الموسوي</h1>
 
 <p>
-
 عدد الكتب:
-
 <span id="books-count">0</span>
-
 </p>
 
 </header>
@@ -44,9 +41,15 @@
 
 <div class="container">
 
-<div id="books-container">
+<input
+id="search"
+type="search"
+placeholder="🔍 ابحث باسم الكتاب أو المؤلف أو التصنيف..."
+autocomplete="off"
+spellcheck="false"
+style="width:100%;padding:14px;font-size:18px;border-radius:10px;border:1px solid #ccc;margin-bottom:20px;">
 
-</div>
+<div id="books-container"></div>
 
 </div>
 
@@ -57,7 +60,6 @@
 </footer>
 
 <script src="books-data.js"></script>
-
 <script src="script.js"></script>
 
 </body>
