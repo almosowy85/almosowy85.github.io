@@ -7,19 +7,28 @@
 
 <style>
 body{
-    font-family: Tahoma, Arial, sans-serif;
-    background:#f4f4f4;
     margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f4f4f4;
 }
 
 header{
-    background:#0b5c8a;
+    background:#0b3d91;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:40px 20px;
 }
 
-main{
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.container{
     max-width:900px;
     margin:auto;
     padding:20px;
@@ -28,15 +37,31 @@ main{
 .card{
     background:white;
     padding:20px;
-    margin:15px 0;
+    margin-top:20px;
     border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-a{
+.card h2{
+    color:#0b3d91;
+}
+
+.button{
+    display:inline-block;
+    background:#0b3d91;
+    color:white;
+    padding:12px 25px;
     text-decoration:none;
-    color:#0b5c8a;
-    font-weight:bold;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    background:#222;
+    color:white;
+    padding:20px;
+    margin-top:40px;
 }
 </style>
 
@@ -45,38 +70,40 @@ a{
 <body>
 
 <header>
-<h1>📚 مكتبة محمد الموسوي</h1>
-<p>موسوعة لنشر المعارف الإسلامية والبحوث النافعة</p>
+<h1>مكتبة محمد الموسوي</h1>
+<p>مقالات وبحوث ودروس مجانية</p>
 </header>
 
-<main>
+<div class="container">
 
 <div class="card">
-<h2>مرحبًا بكم</h2>
+<h2>من نحن</h2>
+
 <p>
-أسأل الله أن يجعل هذا العمل خالصًا لوجهه الكريم، وأن ينفع به كل باحث عن الحقيقة.
+مرحباً بكم في مكتبة محمد الموسوي.
+سيتم نشر المقالات والبحوث والدروس الإسلامية والكتب المفيدة بصورة مجانية.
 </p>
-</div>
 
-<div class="card">
-<h2>أقسام الموقع</h2>
-
-<p>📖 العقائد</p>
-<p>⚖️ الفقه</p>
-<p>📜 الحديث الشريف</p>
-<p>📖 القرآن الكريم</p>
-<p>🤲 الأدعية والزيارات</p>
-<p>❓ الرد على الشبهات</p>
-<p>🤖 الذكاء الاصطناعي</p>
+<a class="button" href="#">اقرأ أحدث المقالات</a>
 
 </div>
 
 <div class="card">
-<h2>آخر المقالات</h2>
-<p>سيتم إضافة المقالات قريبًا بإذن الله.</p>
+<h2>آخر الإضافات</h2>
+
+<ul>
+<li>قريباً: أول مقال.</li>
+<li>قريباً: مكتبة الكتب.</li>
+<li>قريباً: قسم الفتاوى.</li>
+</ul>
+
 </div>
 
-</main>
+</div>
+
+<footer>
+جميع الحقوق محفوظة © 2026
+</footer>
 
 </body>
 </html>
