@@ -9,7 +9,7 @@ year: "2024",
 category: "حديث",
 description: "مجموعة من الخطب والرسائل والحكم.",
 image: "images/nahj.jpg",
-pdf: "pdf/nahj.pdf"
+pdf: "elel-alsharaie.pdf"
 }
 
 ];
