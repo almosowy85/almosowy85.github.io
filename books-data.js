@@ -8,7 +8,7 @@ year: "—",
 category: "حديث",
 description: "كتاب علل الشرائع للشيخ الصدوق.",
 image: "images/elel-alsharaie.jpg",
-pdf: "pdf/elel-alsharaie.pdf"
+pdf: "pdf/elel-alsharaie (1).pdf"
 }
 
 ];
