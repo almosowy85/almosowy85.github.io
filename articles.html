@@ -6,11 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>المقال</title>
+<title>المقالات</title>
 
 <link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 
@@ -18,7 +16,12 @@
 
 <header>
 
-<h1 id="article-title">جاري تحميل المقال...</h1>
+<h1>📚 المقالات</h1>
+
+<p>
+عدد المقالات:
+<span id="articles-count">0</span>
+</p>
 
 </header>
 
@@ -34,24 +37,19 @@
 
 <div class="container">
 
-<div id="article-content">
+<input
+id="search"
+type="text"
+placeholder="🔍 ابحث عن مقال..."
+style="width:100%;padding:12px;margin-bottom:20px;">
 
-جاري تحميل المقال...
-
-</div>
-
-<br>
-
-<a class="button" href="articles.html">
-
-⬅ العودة إلى المقالات
-
-</a>
+<div id="articles-container"></div>
 
 </div>
 
-<script src="article.js"></script>
+<script src="articles-data.js"></script>
+<script src="articles.js"></script>
 
 </body>
 
-</
+</html>
