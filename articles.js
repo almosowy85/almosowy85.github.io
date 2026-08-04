@@ -1,46 +1,95 @@
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-const params = new URLSearchParams(window.location.search);
-const file = params.get("file");
+const articlesContainer = document.getElementById("articles-container");
+const articlesCount = document.getElementById("articles-count");
+const search = document.getElementById("search");
 
-const title = document.getElementById("article-title");
-const content = document.getElementById("article-content");
+function normalize(text){
 
-if (!file) {
-    title.textContent = "المقال غير موجود";
-    content.innerHTML = "<p>لم يتم تحديد أي مقال.</p>";
-    return;
-}
-
-try {
-
-    const response = await fetch(file);
-
-    if (!response.ok) {
-        throw new Error("File not found");
-    }
-
-    const markdown = await response.text();
-
-    const firstTitle = markdown.match(/^#\s+(.+)$/m);
-
-    if (firstTitle) {
-        title.textContent = firstTitle[1];
-    }
-
-    content.innerHTML = marked.parse(markdown);
+return text
+.toLowerCase()
+.replace(/[أإآ]/g,"ا")
+.replace(/ى/g,"ي")
+.replace(/ة/g,"ه")
+.replace(/[ًٌٍَُِّْ]/g,"");
 
 }
-catch (error) {
 
-    title.textContent = "خطأ";
+function showArticles(list){
 
-    content.innerHTML = `
-        <p>
-        تعذر تحميل المقال.
-        </p>
-    `;
+articlesContainer.innerHTML = "";
+
+articlesCount.textContent = list.length;
+
+if(list.length===0){
+
+articlesContainer.innerHTML="<p>❌ لا توجد مقالات.</p>";
+
+return;
 
 }
+
+list.forEach(article=>{
+
+articlesContainer.innerHTML += `
+
+<div class="book">
+
+<img src="${article.image}" alt="${article.title}">
+
+<div class="info">
+
+<h2>${article.title}</h2>
+
+<p><strong>👤 الكاتب:</strong> ${article.author}</p>
+
+<p><strong>🏷️ التصنيف:</strong> ${article.category}</p>
+
+<p>${article.description}</p>
+
+<a class="button"
+href="article.html?file=${encodeURIComponent(article.file)}">
+
+📖 اقرأ المقال
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+showArticles(articles);
+
+search.addEventListener("input",function(){
+
+const value = normalize(this.value.trim());
+
+const result = articles.filter(article=>
+
+normalize(article.title).includes(value)
+
+||
+
+normalize(article.author).includes(value)
+
+||
+
+normalize(article.category).includes(value)
+
+||
+
+normalize(article.description).includes(value)
+
+);
+
+showArticles(result);
+
+});
 
 });
