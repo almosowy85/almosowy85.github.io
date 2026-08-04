@@ -1,82 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
 
-const articlesContainer = document.getElementById("articles-container");
-const articlesCount = document.getElementById("articles-count");
-const search = document.getElementById("search");
+const params = new URLSearchParams(window.location.search);
+const file = params.get("file");
 
-function normalize(text){
+const title = document.getElementById("article-title");
+const content = document.getElementById("article-content");
 
-return text
-.toLowerCase()
-.replace(/[أإآ]/g,"ا")
-.replace(/ى/g,"ي")
-.replace(/ة/g,"ه")
-.replace(/[ًٌٍَُِّْ]/g,"");
-
+if (!file) {
+    title.textContent = "المقال غير موجود";
+    content.innerHTML = "<p>لم يتم تحديد أي مقال.</p>";
+    return;
 }
 
-function showArticles(list){
+try {
 
-articlesContainer.innerHTML="";
+    const response = await fetch(file);
 
-articlesCount.textContent=list.length;
+    if (!response.ok) {
+        throw new Error("File not found");
+    }
 
-if(list.length===0){
+    const markdown = await response.text();
 
-articlesContainer.innerHTML="<p>❌ لا توجد مقالات.</p>";
+    const firstTitle = markdown.match(/^#\s+(.+)$/m);
 
-return;
+    if (firstTitle) {
+        title.textContent = firstTitle[1];
+    }
 
-}
-
-list.forEach(article=>{
-
-articlesContainer.innerHTML+=`
-
-<div class="book">
-
-<img src="${article.image}" alt="${article.title}">
-
-<div class="info">
-
-<h2>${article.title}</h2>
-
-<p>${article.description}</p>
-
-<a class="button" href="${article.page}">
-
-📖 اقرأ المقال
-
-</a>
-
-</div>
-
-</div>
-
-`;
-
-});
+    content.innerHTML = marked.parse(markdown);
 
 }
+catch (error) {
 
-showArticles(articles);
+    title.textContent = "خطأ";
 
-search.addEventListener("input",function(){
+    content.innerHTML = `
+        <p>
+        تعذر تحميل المقال.
+        </p>
+    `;
 
-const value=normalize(this.value.trim());
-
-const result=articles.filter(article=>
-
-normalize(article.title).includes(value)
-
-||
-
-normalize(article.description).includes(value)
-
-);
-
-showArticles(result);
-
-});
+}
 
 });
