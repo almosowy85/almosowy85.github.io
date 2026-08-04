@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>المقالات</title>
+<title>المقال</title>
 
 <link rel="stylesheet" href="style.css">
+
+<!-- مكتبة Markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 
@@ -18,15 +18,7 @@
 
 <header>
 
-<h1>📰 المقالات</h1>
-
-<p>
-
-عدد المقالات:
-
-<span id="articles-count">0</span>
-
-</p>
+<h1 id="article-title">جاري تحميل المقال...</h1>
 
 </header>
 
@@ -38,41 +30,27 @@
 
 <a href="articles.html">المقالات</a>
 
-<a href="about.html">من أنا</a>
-
-<a href="contact.html">تواصل معي</a>
-
 </nav>
 
 <div class="container">
 
-<input
+<div id="article-content">
 
-id="search"
-
-type="search"
-
-placeholder="🔍 ابحث عن مقال..."
-
-autocomplete="off"
-
-spellcheck="false"
-
-style="width:100%;padding:14px;font-size:18px;border-radius:10px;border:1px solid #ccc;margin-bottom:20px;">
-
-<div id="articles-container"></div>
+جارٍ تحميل المقال...
 
 </div>
 
-<footer>
+<br>
 
-© 2026 محمد الموسوي
+<a class="button" href="articles.html">
 
-</footer>
+⬅ العودة إلى المقالات
 
-<script src="articles-data.js"></script>
+</a>
 
-<script src="articles.js"></script>
+</div>
+
+<script src="article.js"></script>
 
 </body>
 
