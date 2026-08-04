@@ -4,34 +4,28 @@ const articlesContainer = document.getElementById("articles-container");
 const articlesCount = document.getElementById("articles-count");
 const search = document.getElementById("search");
 
-function normalize(text){
-
-return text
-.toLowerCase()
-.replace(/[أإآ]/g,"ا")
-.replace(/ى/g,"ي")
-.replace(/ة/g,"ه")
-.replace(/[ًٌٍَُِّْ]/g,"");
-
+function normalize(text) {
+    return (text || "")
+        .toLowerCase()
+        .replace(/[أإآ]/g, "ا")
+        .replace(/ى/g, "ي")
+        .replace(/ة/g, "ه")
+        .replace(/[ًٌٍَُِّْ]/g, "");
 }
 
-function showArticles(list){
+function showArticles(list) {
 
-articlesContainer.innerHTML = "";
+    articlesContainer.innerHTML = "";
+    articlesCount.textContent = list.length;
 
-articlesCount.textContent = list.length;
+    if (list.length === 0) {
+        articlesContainer.innerHTML = "<p>لا توجد مقالات.</p>";
+        return;
+    }
 
-if(list.length===0){
+    list.forEach(article => {
 
-articlesContainer.innerHTML="<p>❌ لا توجد مقالات.</p>";
-
-return;
-
-}
-
-list.forEach(article=>{
-
-articlesContainer.innerHTML += `
+        articlesContainer.innerHTML += `
 
 <div class="book">
 
@@ -43,53 +37,4 @@ articlesContainer.innerHTML += `
 
 <p><strong>👤 الكاتب:</strong> ${article.author}</p>
 
-<p><strong>🏷️ التصنيف:</strong> ${article.category}</p>
-
-<p>${article.description}</p>
-
-<a class="button"
-href="article.html?file=${encodeURIComponent(article.file)}">
-
-📖 اقرأ المقال
-
-</a>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-}
-
-showArticles(articles);
-
-search.addEventListener("input",function(){
-
-const value = normalize(this.value.trim());
-
-const result = articles.filter(article=>
-
-normalize(article.title).includes(value)
-
-||
-
-normalize(article.author).includes(value)
-
-||
-
-normalize(article.category).includes(value)
-
-||
-
-normalize(article.description).includes(value)
-
-);
-
-showArticles(result);
-
-});
-
-});
+<p><strong>📅 التاريخ:</strong
