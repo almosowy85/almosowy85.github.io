@@ -10,6 +10,35 @@
 
 <link rel="stylesheet" href="style.css">
 
+<style>
+/* كود إصلاح عرض البطاقات والصور على الهاتف */
+#articles-container > div, .article-card {
+    display: flex !important;
+    flex-direction: column !important; /* ترتيب العناصر عمودياً (الصورة فوق والنص تحت) */
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+#articles-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#articles-container h2, #articles-container h3 {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+    color: #0b3d91;
+}
+</style>
+
 </head>
 
 <body>
@@ -41,7 +70,7 @@
 id="search"
 type="text"
 placeholder="🔍 ابحث عن مقال..."
-style="width:100%;padding:12px;margin-bottom:20px;">
+style="width:100%;padding:12px;margin-bottom:20px;border:1px solid #ccc;border-radius:8px;">
 
 <div id="articles-container"></div>
 
