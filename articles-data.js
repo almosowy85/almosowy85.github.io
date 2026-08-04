@@ -1,3 +1,5 @@
+const articles = [
+
 {
 title:"الإمام الحسن المجتبى عليه السلام",
 author:"محمد الموسوي",
@@ -6,3 +8,5 @@ description:"نبذة مختصرة عن حياة الإمام الحسن علي�
 image:"images/imam-hassan.jpeg",
 file:"articles/imam-hassan.md"
 }
+
+];
