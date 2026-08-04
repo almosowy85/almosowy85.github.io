@@ -17,7 +17,7 @@ try {
     const response = await fetch(file);
 
     if (!response.ok) {
-        throw new Error("تعذر تحميل الملف");
+        throw new Error();
     }
 
     const markdown = await response.text();
@@ -30,13 +30,13 @@ try {
 
     contentElement.innerHTML = marked.parse(markdown);
 
-} catch (error) {
+} catch {
 
     titleElement.textContent = "خطأ";
 
     contentElement.innerHTML = `
         <p>تعذر تحميل المقال.</p>
-        <p><strong>الملف:</strong> ${file}</p>
+        <p>تأكد من وجود الملف في مجلد articles.</p>
     `;
 
 }
