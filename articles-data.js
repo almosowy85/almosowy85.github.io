@@ -1,10 +1,10 @@
 const articles = [
 
 {
-title:"عنوان المقال",
-description:"نبذة قصيرة عن المقال.",
-image:"images/article1.jpeg",
-page:"articles/article1.html"
+title:"الإمام الحسن المجتبى عليه السلام",
+description:"نبذة مختصرة عن حياة الإمام الحسن عليه السلام.",
+image:"images/imam-hassan.jpeg",
+page:"articles/imam-hassan.html"
 }
 
 ];
