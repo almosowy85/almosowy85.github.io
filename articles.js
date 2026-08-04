@@ -37,4 +37,43 @@ function showArticles(list) {
 
 <p><strong>👤 الكاتب:</strong> ${article.author}</p>
 
-<p><strong>📅 التاريخ:</strong
+<p><strong>📅 التاريخ:</strong> ${article.date}</p>
+
+<p><strong>🏷️ التصنيف:</strong> ${article.category}</p>
+
+<p>${article.description}</p>
+
+<a class="button" href="article.html?file=${encodeURIComponent(article.file)}">
+📖 اقرأ المقال
+</a>
+
+</div>
+
+</div>
+
+`;
+
+    });
+
+}
+
+showArticles(articles);
+
+search.addEventListener("input", function () {
+
+    const value = normalize(this.value);
+
+    const result = articles.filter(article =>
+
+        normalize(article.title).includes(value) ||
+        normalize(article.author).includes(value) ||
+        normalize(article.category).includes(value) ||
+        normalize(article.description).includes(value)
+
+    );
+
+    showArticles(result);
+
+});
+
+});
