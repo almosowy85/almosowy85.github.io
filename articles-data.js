@@ -14,7 +14,7 @@ const articles = [
     date: "2026-08-04",
     category: "عام",
     description: "سيتم إضافة محتوى هذا المقال قريباً بإذن الله.",
-    image: "images/default.jpeg",
+    image: "images/default.jpg",
     file: "articles/article-2.md"
   },
   {
@@ -23,7 +23,7 @@ const articles = [
     date: "2026-08-04",
     category: "عام",
     description: "سيتم إضافة محتوى هذا المقال قريباً بإذن الله.",
-    image: "images/default.jpeg",
+    image: "images/soon.jpg",
     file: "articles/article-3.md"
   },
   {
@@ -32,7 +32,7 @@ const articles = [
     date: "2026-08-04",
     category: "عام",
     description: "سيتم إضافة محتوى هذا المقال قريباً بإذن الله.",
-    image: "images/default.jpeg",
+    image: "images/soon.jpg",
     file: "articles/article-4.md"
   },
   {
