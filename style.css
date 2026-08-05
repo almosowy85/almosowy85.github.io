@@ -12,11 +12,14 @@ color:#222;
 line-height:1.8;
 }
 
-header{
-background:#0d47a1;
-color:white;
-padding:30px;
-text-align:center;
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
 }
 
 nav{
