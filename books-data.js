@@ -15,8 +15,108 @@ const books = [
     pages: "841",
     year: "—",
     category: "عقائد وخطب",
-    description: "كتاب نهج البلاغة - شريف الرضي.",
-    image: "images/nahj.jpg", 
+    description: "كتاب نهج البلاغة.",
+    image: "images/nahj.jpg",
     pdf: "pdf/nahj1.pdf"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
+  },
+  {
+    title: "قريباً بإذن الله",
+    author: "قريباً",
+    pages: "—",
+    year: "—",
+    category: "عام",
+    description: "سيتم إضافة هذا الكتاب قريباً بإذن الله.",
+    image: "images/soon.jpg",
+    pdf: "#"
   }
 ];
