@@ -18,8 +18,8 @@ pages: "٨٤١",
 year: "",
 category: "",
 description: "",
-image: "images/nahj1.jpeg",
-pdf: "pdf/.pdf"
+image: "images/nahj.jpg",
+pdf: "pdf/nahj1.pdf"
 }
  , 
 {
