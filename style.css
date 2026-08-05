@@ -4,6 +4,12 @@ padding:0;
 box-sizing:border-box;
 }
 
+/* منع أي خروج أفقي خارج شاشة الجوال */
+html, body {
+width: 100%;
+overflow-x: hidden;
+}
+
 body{
 font-family:Tahoma,Arial,sans-serif;
 background:#f4f6f9;
@@ -15,55 +21,81 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/maktaba.jpg') no-repeat center center;
     background-size: cover;
     color: white;
-    padding: 60px 20px;
+    padding: 50px 15px;
     text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+header p {
+    font-size: 16px;
 }
 
 nav{
 background:white;
-padding:15px;
+padding:12px;
 text-align:center;
 box-shadow:0 2px 10px rgba(0,0,0,.1);
+width: 100%;
 }
 
 nav a{
 color:#0d47a1;
 text-decoration:none;
 font-weight:bold;
-margin:0 12px;
+margin:0 6px;
+display: inline-block;
+font-size: 15px;
 }
 
 .container{
+width: 100%;
 max-width:1100px;
 margin:auto;
-padding:20px;
+padding:15px;
 }
 
-.book{
-display:flex;
-gap:20px;
-align-items:center;
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+width: 100%;
+}
+
+.card h2{
+color:#0d47a1;
+margin-bottom:12px;
+}
+
+.article{
 background:white;
 border-radius:15px;
-padding:20px;
-margin-bottom:25px;
+overflow:hidden;
+margin-bottom:20px;
 box-shadow:0 4px 12px rgba(0,0,0,.1);
-flex-wrap:wrap;
+width: 100%;
 }
 
-.book img{
-width:160px;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-background:#ddd;
+.article img{
+width:100%;
+height: auto;
+max-height: 250px;
+object-fit: cover;
+display:block;
 }
 
-.info{
-flex:1;
+.article-content{
+padding:15px;
 }
 
-.info h2{
+.article-content h3{
 color:#0d47a1;
 margin-bottom:10px;
 }
@@ -71,7 +103,6 @@ margin-bottom:10px;
 .button{
 display:inline-block;
 margin-top:10px;
-margin-left:8px;
 padding:10px 18px;
 background:#0d47a1;
 color:white;
@@ -84,5 +115,6 @@ background:#222;
 color:white;
 padding:20px;
 text-align:center;
-margin-top:40px;
+margin-top:30px;
+width: 100%;
 }
